@@ -1,0 +1,261 @@
+% !TEX program = xelatex
+\documentclass[letterpaper,10pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage[letterpaper,margin=1.6cm,headheight=12pt]{geometry}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{fontawesome5}
+\usepackage{academicons}
+\usepackage{stix}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[inline,shortlabels]{enumitem}
+\usepackage{titlesec}
+\usepackage{xifthen}
+\usepackage[normalem]{ulem}
+\usepackage{lipsum}
+
+\setmainfont{Linux Libertine O} % Linux Libertine O (or) Crimson
+
+\definecolor{default}{HTML}{8d0016}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=default,
+  linkbordercolor={0 0 1}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\name}{Karthik Soma}
+
+\fancyhf{}
+\fancyhead[L]{\footnotesize \name}
+\fancyhead[R]{\footnotesize CV}
+\fancyfoot[C]{\footnotesize Page\ \thepage\ of\ \pageref{LastPage}}
+\pagestyle{fancy}
+
+\newcommand{\headlink}[3]{
+    \normalsize#1\enspace\large\href{#2}{\texttt{#3}}
+}
+
+\fancypagestyle{firstpage}{
+    \fancyhead[L]{}
+    \fancyhead[R]{}
+}
+
+\AtBeginDocument{
+    \thispagestyle{firstpage}
+    \begin{center}
+        \huge\textsc{\textbf{\name}} \par
+        \large
+        \begin{itemize*}[label={},afterlabel={},itemjoin={\enspace$\smblkdiamond$\enspace}]
+            \item \headlink{\faGithub}{https://github.com/karthiks1701}{Code}
+            \item \headlink{\faLinkedin}{https://www.linkedin.com/in/karthik-soma-b92166162/}{linkedin}
+            \item \headlink{\faEnvelope}{mailto:soma.nitt@gmail.com}{E-mail}
+            \item \headlink{\aiGoogleScholar}{https://scholar.google.ca/citations?user=eJ5jLXoAAAAJ&hl=en}{Gscholar}
+        \end{itemize*}
+    \end{center}
+    \vspace{-8pt}
+    \normalsize
+}
+
+\newenvironment{cvitemize}{
+    \begin{itemize}[leftmargin=10pt,label={},afterlabel={},after=\vspace{-12pt}]
+}{
+    \end{itemize}
+}
+
+\newenvironment{cvenumerate}{
+    \begin{enumerate}[leftmargin=20pt,after=\vspace{-12pt}]
+}{
+    \end{enumerate}
+}
+
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{-5pt}
+\titleformat{\section}{\large\color{default}\scshape\bfseries}{\thesection}{1em}{}[{\color{black}\titlerule[0.2pt]}]
+\titleformat{\subsection}{\bfseries}{\thesubsection}{1em}{\hspace{10pt}}[]
+
+\newcommand{\eduitem}[5]{
+    \item{
+        \textbf{#1} \hfill \textit{#2} \newline
+        \textit{#3} \hfill \textit{#4} \newline
+        #5
+    }
+}
+
+\newcommand{\point}{\raisebox{0.1\height}{$\smallblacktriangleright$}\hspace{4pt}}
+
+\newcommand{\expitem}[6]{
+    \item{
+        \textbf{#1} \hfill \textit{#2} \newline
+        \textit{#3} \hfill \textit{#4} \newline
+        \point #5 \newline
+        #6
+    }
+}
+
+\newcommand{\highlight}{\raisebox{0.1\height}{$\bigstar$}\hspace{4pt}}
+
+\renewcommand{\ULthickness}{0.2pt}
+\newcommand{\me}{\uline{K~Soma}}
+
+\newcommand{\pubitem}[6]{
+    \item{
+        \begin{minipage}[t]{0.86\linewidth}
+            \textit{#1} \\
+            #2
+        \end{minipage}\hfill
+        \begin{minipage}[t]{0.13\linewidth}
+            \raggedleft
+            \begin{tabular}[t]{@{}rl@{}}
+                \aiarXiv & \href{#5}{Arxiv}
+                \ifthenelse{\isempty{#6}}
+                    {}
+                    {\\ \faGithub & \href{#6}{Code}}
+            \end{tabular}
+        \end{minipage}
+        \newline
+        \textit{#3}
+        \ifthenelse{\isempty{#4}}
+            {}
+            {\newline #4}
+    }
+}
+
+\begin{document}
+
+\section*{Education}
+\begin{cvitemize}
+    \eduitem{Polytechnique Montréal, Mila Quebec AI Institute}{Sept 2021 -- Dec 2026 (expected)}{Ph.D., Department of Computer and Software engineering}{GPA: 3.98 / 4.00}{
+        \textbf{Advisor:} Prof Giovanni Beltrame 
+        % \newline
+        % \textbf{Societies:} Club \newline
+        % \highlight I'm the boss!
+    }
+
+    \eduitem{National Institute of Technology, Tiruchirappalli}{Jul 2017 -- Jul 2021}{B.Tech in Instrument and Control engineering}{GPA: 8.98 / 10.00}{}
+        % \textbf{Supervisor:} Prof Giovanni Beltrame \newline
+        % \textbf{Societies:} Club \newline
+        % \highlight I'm the boss!
+
+\end{cvitemize}
+
+
+\section*{Publications}
+
+\subsection*{Accepted}
+\begin{cvitemize}
+    \pubitem{Multi-Robot Decentralized Collaborative SLAM in Planetary Analogue Environments: Dataset, Challenges, and Lessons Learned}{PY Lajoie, \me, HM Bong, A Lemieux-Bourque, R Zhang, VS Varadharajan, G Beltrame}{IEEE Transactions on Field Robotics (T-FR) / ICRA, 2026}{}{https://arxiv.org/abs/2601.21063}{https://github.com/MISTLab/Mars_Analogue_CSLAM_Dataset}
+
+    \pubitem{Split Over $n$ Resource Sharing Problem: Are Fewer Capable Agents Better Than Many Simpler Ones?}{\me, MS Talamali, G Miyauchi, G Beltrame, H Hamann, R Groß}{International Conference on Swarm Intelligence (ANTS), 2026}{}{https://arxiv.org/abs/2604.26374}{}
+
+    \pubitem{Sociodynamics of Reinforcement Learning}{Y Bouteiller, \me, G Beltrame}{Transactions on Machine Learning Research (TMLR) / RLC, 2026}{}{https://arxiv.org/abs/2410.17466}{https://github.com/MISTLab/RL-societies}
+
+    \pubitem{The Heterogeneous Multi-Agent Challenge}{C Dansereau, JS Lopez-Yepez, \me, A Fagette}{European Conference on Artificial Intelligence (ECAI), 2025}{}{https://arxiv.org/abs/2509.19512}{https://github.com/ThalesGroup/hemac}
+
+    \pubitem{A Complete Set of Connectivity-aware Local Topology Manipulation Operations for Robot Swarms}{\me*, K Khateri*, M Pourgholi, M Montazeri, L Sabattini, G Beltrame}{IEEE International Conference on Robotics and Automation (ICRA), 2023}{}{https://arxiv.org/abs/2210.00037}{}
+
+    \pubitem{Congestion and Scalability in Robot Swarms: A Study on Collective Decision Making}{\me, VS Vardharajan, H Hamann, G Beltrame}{International Symposium on Multi-Robot and Multi-Agent Systems (MRS), 2023}{}{https://arxiv.org/abs/2307.08568}{https://github.com/MISTLab/Congestion-Scalability}
+
+    \pubitem{Collective Transport via Sequential Caging}{VS Vardharajan, \me, G Beltrame}{International Symposium on Distributed Autonomous Robotic Systems (DARS), 2021}{}{https://arxiv.org/abs/2106.03132}{https://github.com/MISTLab/SwarmHaul}
+\end{cvitemize}
+
+\subsection*{Preprints}
+\begin{cvitemize}
+    \pubitem{The Hive Mind is a Single Reinforcement Learning Agent}{\me, Y Bouteiller, H Hamann, G Beltrame}{ArXiv preprint, 2025}{}{https://arxiv.org/abs/2410.17517}{https://github.com/MISTLab/HiveMindRL}
+
+    \pubitem{Guided by Guardrails: Control Barrier Functions as Safety Instructors for Robotic Learning}{M Guerrier, \me, H Fouad, G Beltrame}{ArXiv preprint, 2025}{}{https://arxiv.org/abs/2505.18858}{}
+
+    \pubitem{Can Vision Foundation Models Navigate? Zero-Shot Real-World Evaluation and Lessons Learned}{M Guerrier, \me, J Pavlasek, G Beltrame}{ArXiv preprint, 2025}{}{https://arxiv.org/abs/2603.25937}{https://github.com/MaevaGuerrier/vnm-zeroshot-eval}
+
+    \pubitem{Hierarchies Define the Scalability of Robot Swarms}{VS Varadharajan, \me, S Dyanatkar, PY Lajoie, G Beltrame}{ArXiv preprint, 2024}{}{https://arxiv.org/abs/2405.02417}{}
+\end{cvitemize}
+
+\section*{Recent Projects}
+\begin{cvitemize}
+
+    \item{
+        \textbf{Mitacs Accelerate - Thales Digital Solutions Inc.} | Research Internship | Montréal, Canada \hfill \enspace \textit{Aug 2024 -- Mar 2026}
+        \newline
+        \textit{Python, PyTorch, ROS, Gazebo, Multi-Agent Reinforcement Learning}
+        \begin{itemize}
+        \item Benchmarked various MARL algorithms in complex coordination tasks involving heterogeneous agents.
+        \item Developed \textit{CamOnlyReachHome}: a camera-only goal-conditioned homing system for drones to handle scenarios when the robot is in localization failure mode.
+        \end{itemize}
+    }
+
+
+    \item{
+        \textbf{Robot Systems for Space Technologies} | Field Robotics, Multi-Robot Systems \hfill \enspace \textit{Sept 2021 -- present}
+        \newline
+        \textit{ROS, Rovers, Collaborative SLAM, Boston Dynamics Spot}
+        \begin{itemize}
+        \item Developed a multi-robot system for the ESA/ESRIC Prospecting Challenge to explore and prospect rock samples in a lunar analogue environment in the Netherlands; responsible for local planning and delay management modules.
+        \item Led navigation for a Boston Dynamics Spot robot in the \textit{Save the Astronaut} project, a cave exploration mission.
+        \item Contributed to a Canadian Space Agency (CSA) Mars-analogue collaborative SLAM dataset, later covered by CNN.
+        \end{itemize}
+    }
+
+
+    \item{
+        \textbf{Swarm Biotactics} | Bio-hybrid Robotics, Swarm Intelligence \hfill \enspace \textit{Dec 2025 -- present}
+        \newline
+        \textit{Collaborative SLAM, Collective Navigation}
+        \begin{itemize}
+        \item Developed a Argos3 based simulator for testing localization and mapping algorithms on low compute devices.
+        \item Designing collective strategies for centroid estimation, flocking and collective navigation.
+        \end{itemize}
+    }
+
+\end{cvitemize}
+
+\section*{Skills}
+\textbf{Programming Languages:} \LaTeX, C/C++, Embedded C, MATLAB, Buzz and Python \newline
+\textbf{Frameworks:} PyTorch, Robotics Operating System (ROS) and Docker \newline
+\textbf{Hardware:} Raspberry Pi, Arduino (Uno, Mega, Nano), ESP8266, NVIDIA Jetson (Nano, Xavier, Orin) \newline
+\textbf{Simulation Software:} Gazebo, Argos3, Unity and CoppeliaSim \newline
+\textbf{Robots:} Ground (Agilex Limo, Rover \& Bunker; Khepera; Duckiebot), Aerial (Crazyflie; Cognifly), Legged (Boston Dynamics Spot; Unitree A1 \& GO2), Humanoid (Unitree G1)
+
+
+
+\section*{Talks}
+\begin{cvitemize}
+    \item{
+        \textbf{The Hive Mind is a Single Reinforcement Learning Agent} \hfill \textit{2026} \newline
+        D\&M Mila Annual Conference, Montréal, Canada (Jan 2026); University of Konstanz, Germany (Jun 2026)
+    }
+\end{cvitemize}
+
+\section*{Achievements}
+\begin{itemize}
+    \item Awarded Mitacs Accelerate grant of 45,000 CAD for research internship at Thales Digital Solutions Inc.
+    \item Awarded Mitacs grant for 6000 CAD to conduct research on Split Over $n$ Resource Sharing Problem at Sheffield University.
+    \item Awarded travel grant of ~3,000 CAD for ICRA’23 at London.
+    \item Selected to participate in the IEEE MRS Summer School’22 in Prague, Czech Republic.
+    \item Awarded Amii talent bursary of 1500 CAD to attend Amii Talent Week’22 in Edmonton, Alberta, Canada.
+    \item Secured 1st Prize in Daksh’20 for Smart Manufacturing Hackathon at Shaastra University, Thanjavur.
+    \item Secured 4th out of 100 teams in the National level Robotics Competition conducted by IIT Bombay (E-Yantra).
+\end{itemize}
+
+\section*{Positions of Responsibilities}
+\begin{itemize}
+    \item Organizing the Multi-Robot Summer School (MRSS) 2026 in Montréal, Canada.
+    \item Teaching Assistant for INF6805E: Swarm Intelligence'26, Polytechnique Montréal.
+    \item Held various roles at National Institute of Technology, Tiruchirappalli (NIT-T)
+    \begin{itemize}
+        \item Inter Profile Co-ordinator of Spider (R\&D) club.
+        \item Workshop Organiser, Sensors'19 \& Sensors'20, National department symposium of ICE dept.
+        \item Member of teaching clubs Ignitte \& U and I.
+        \item Deputy Manager, Festember Media Relations team, Festember'19.
+        \item Winning Hostel Coordinator, freshman intra-hostel competition Aaveg'18.
+    \end{itemize}
+\end{itemize}
+
+\end{document}

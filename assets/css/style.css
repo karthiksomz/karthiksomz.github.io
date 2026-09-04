@@ -1,0 +1,147 @@
+:root {
+  --accent: #8d0016;
+  --text: #1a1a1a;
+  --muted: #555;
+  --bg: #ffffff;
+  --border: #ddd;
+  --max-width: 850px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+header.site-header {
+  border-bottom: 2px solid var(--accent);
+  padding: 1.5rem 1rem 1rem;
+  text-align: center;
+}
+
+header.site-header h1 {
+  margin: 0 0 0.3rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+nav.site-nav {
+  margin-top: 0.8rem;
+}
+
+nav.site-nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin: 0 0.7rem;
+  font-size: 0.95rem;
+  padding-bottom: 2px;
+}
+
+nav.site-nav a:hover,
+nav.site-nav a.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.links-row {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.links-row a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.4rem;
+}
+
+.links-row a:hover { text-decoration: underline; }
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+section {
+  margin-bottom: 2.2rem;
+}
+
+section h2 {
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+h3.entry-title {
+  margin: 0 0 0.1rem;
+  font-size: 1.02rem;
+}
+
+.entry-meta {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.3rem;
+}
+
+.entry {
+  margin-bottom: 1.3rem;
+}
+
+ul.plain {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+ul.plain li {
+  margin-bottom: 0.25rem;
+}
+
+.pub-links {
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.pub-links a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+.pub-links a:hover { text-decoration: underline; }
+
+.skills-grid p {
+  margin: 0.3rem 0;
+}
+
+.placeholder-box {
+  border: 1px dashed var(--border);
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
+  border-radius: 4px;
+}
+
+footer.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 600px) {
+  .entry-meta { flex-direction: column; }
+  .pub-links { white-space: normal; }
+}
