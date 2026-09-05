@@ -195,6 +195,14 @@ h3.entry-title {
   margin-bottom: 0.2rem;
 }
 
+.entry-meta a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.entry-meta a:hover { text-decoration: underline; }
+
 ul.plain {
   margin: 0.5rem 0 0;
   padding-left: 1.2rem;
