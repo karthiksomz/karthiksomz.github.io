@@ -8,21 +8,47 @@
 </head>
 <body>
 
-<header class="site-header">
+<div class="page">
+
+<aside class="sidebar">
+  <div class="avatar-wrap">
+    <img class="avatar" src="assets/img/profile.jpg" alt="Karthik Soma"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="avatar-fallback">KS</div>
+  </div>
+
   <h1>Karthik Soma</h1>
-  <nav class="site-nav">
+  <p class="role-line">
+    Ph.D., Department of Computer and Software engineering<br>
+    Polytechnique Montréal, Mila Quebec AI Institute
+  </p>
+
+  <ul class="contact-list">
+    <li><a href="https://github.com/karthiksomz">
+      <svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      Code
+    </a></li>
+    <li><a href="https://www.linkedin.com/in/karthik-soma-b92166162/">
+      <svg viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146zM4.943 12.248V6.169H2.542v6.079h2.401zm-1.2-6.906c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 6.906V8.884c0-.185.014-.369.068-.5.147-.369.483-.75 1.047-.75.738 0 1.033.56 1.033 1.382v3.232h2.4V8.75c0-2.22-1.185-3.25-2.766-3.25-1.274 0-1.845.7-2.165 1.192v.025h-.017l.017-.025V6.169h-2.4c.03.678 0 6.079 0 6.079h2.4z"/></svg>
+      linkedin
+    </a></li>
+    <li><a href="mailto:soma.nitt@gmail.com">
+      <svg viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.708 2.825L15 11.105V5.383zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741zM1 11.105l4.708-2.897L1 5.383v5.722z"/></svg>
+      E-mail
+    </a></li>
+    <li><a href="https://scholar.google.ca/citations?user=eJ5jLXoAAAAJ&hl=en">
+      <svg viewBox="0 0 16 16"><path d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .017.912l7.5 3a.5.5 0 0 0 .388 0l7.5-3a.5.5 0 0 0 .017-.912l-7.5-3.5zM4.176 9.032a.5.5 0 0 0-.656.478v4.012c0 .834.895 1.291 1.484 1.784 1 .834 2.196 1.194 3.996 1.194s2.997-.36 3.997-1.194c.589-.493 1.484-.95 1.484-1.784V9.51a.5.5 0 0 0-.656-.478l-4.5 1.8a.5.5 0 0 1-.372 0l-4.5-1.8z"/></svg>
+      Gscholar
+    </a></li>
+  </ul>
+
+  <nav class="sidebar-nav">
     <a href="index.html">Home</a>
     <a href="demos.html" class="active">Robot Demos</a>
     <a href="blog.html">Blog</a>
     <a href="news.html">News</a>
   </nav>
-  <div class="links-row">
-    <a href="https://github.com/karthiksomz">Code</a>
-    <a href="https://www.linkedin.com/in/karthik-soma-b92166162/">linkedin</a>
-    <a href="mailto:soma.nitt@gmail.com">E-mail</a>
-    <a href="https://scholar.google.ca/citations?user=eJ5jLXoAAAAJ&hl=en">Gscholar</a>
-  </div>
-</header>
+</aside>
 
 <main>
 <section>
@@ -32,6 +58,8 @@
   </div>
 </section>
 </main>
+
+</div>
 
 <footer class="site-footer">
   <p>Karthik Soma &middot; <a href="mailto:soma.nitt@gmail.com">soma.nitt@gmail.com</a></p>
