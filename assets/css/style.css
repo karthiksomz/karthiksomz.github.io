@@ -203,6 +203,18 @@ h3.entry-title {
 
 .entry-meta a:hover { text-decoration: underline; }
 
+.video-row {
+  display: flex;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.video-row .entry {
+  flex: 1 1 0;
+  margin-bottom: 0;
+  min-width: 0;
+}
+
 .video-wrap {
   position: relative;
   width: 100%;
@@ -346,6 +358,9 @@ footer.site-footer {
   .page {
     flex-direction: column;
     gap: 1.5rem;
+  }
+  .video-row {
+    flex-direction: column;
   }
   aside.sidebar {
     width: 100%;
