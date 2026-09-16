@@ -71,13 +71,31 @@
       <span><strong>Presenting my work to the Mila community</strong></span>
     </div>
     <div class="video-wrap">
-      <iframe src="https://www.youtube.com/embed/PpSpdPhTOsk?start=3282"
-              title="Presenting my work to the Mila community" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen></iframe>
+      <div id="mila-talk-player"></div>
     </div>
   </div>
 </section>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var milaTalkStart = 3282;
+var milaTalkEnd = 4182;
+var milaTalkPlayer;
+function onYouTubeIframeAPIReady() {
+  milaTalkPlayer = new YT.Player('mila-talk-player', {
+    videoId: 'PpSpdPhTOsk',
+    playerVars: { start: milaTalkStart, end: milaTalkEnd },
+    events: {
+      onStateChange: function (e) {
+        if (e.data === YT.PlayerState.ENDED) {
+          milaTalkPlayer.seekTo(milaTalkStart);
+          milaTalkPlayer.playVideo();
+        }
+      }
+    }
+  });
+}
+</script>
 
 </main>
 
