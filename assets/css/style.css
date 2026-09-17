@@ -233,12 +233,12 @@ h3.entry-title:not(:first-child) {
 }
 
 .video-row-fixed .entry {
-  flex: 0 0 260px;
+  flex: 0 0 130px;
 }
 
 .video-row-fixed .video-wrap {
-  width: 260px;
-  height: 180px;
+  width: 130px;
+  height: 90px;
   aspect-ratio: unset;
 }
 
