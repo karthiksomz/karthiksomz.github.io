@@ -175,6 +175,10 @@ h3.entry-title {
   letter-spacing: 0.05em;
 }
 
+h3.entry-title:not(:first-child) {
+  margin-top: 1.8rem;
+}
+
 .entry {
   padding: 1rem 1.1rem;
   margin-bottom: 0.9rem;
