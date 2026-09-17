@@ -228,11 +228,18 @@ h3.entry-title:not(:first-child) {
   overflow: hidden;
 }
 
-.video-wrap.portrait {
-  aspect-ratio: 9 / 16;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+.video-row-fixed {
+  flex-wrap: wrap;
+}
+
+.video-row-fixed .entry {
+  flex: 0 0 260px;
+}
+
+.video-row-fixed .video-wrap {
+  width: 260px;
+  height: 180px;
+  aspect-ratio: unset;
 }
 
 .video-wrap iframe,
